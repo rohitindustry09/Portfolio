@@ -1,0 +1,533 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    *::-webkit-scrollbar {
+     display: none; 
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d1117;
+      color: #fff;
+    }
+    nav {
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0; /* Aligns it to the top */
+  left: 0; /* Aligns it to the left */
+  right: 0; /* Makes sure it stretches across the width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000; /* You can customize the background color */
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* A subtle shadow for the navbar */
+  z-index: 1000; /* Makes sure the navbar stays on top of other elements */
+}
+    .nav-title {
+      display: inline-block;
+      font-size: 30px !important;
+      color: #ff4b5c;
+      letter-spacing: 10px;
+    }
+    .nav-links {
+      list-style: none;
+      position: fixed;
+      top: 40vh;
+      right: -300px; /* Initially hidden */
+      border-radius: 10px;
+      background: #000000;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      z-index: 100 !important;
+      box-shadow: 2px 2px 0px red;
+      transition: all 0.4s;
+    }
+    .nav-links li {
+      margin: 10px 0;
+      padding: 5px 10px;
+      background: #e6e6e6;
+      border-radius: 10px;
+      font-size: 20px;
+      box-shadow: 2px -2px 0px #ff4b5c;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      align-items: center;
+    }
+    .text {
+      position: absolute;
+      right: 10px;
+      color: black;
+      font-size: 15px;
+      transition: all 0.4s;
+      z-index: -1;
+      font-size: 2px;
+      opacity: 0;
+      padding: 5px;
+      font-size: 15px;
+    }
+    .nav-links li:hover .text {
+      position: absolute;
+      right: 65px;
+      color: white;
+      background: red;
+      border-radius: 10px;
+      opacity: 1;
+    }
+    .show {
+      background-color: #ff4b5c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: none;
+      
+      transition: all .2s;
+    }
+
+    .shosw:hover {
+      background: #ff2338;
+      transform: rotate(15deg) !important;
+    }
+
+        .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      paddixng: 20px;
+      padding-top: 60px;
+    }
+    #stop-text-line {
+      animation: blinkText 2s steps(2, start) infinite;
+    }
+    @keyframes blinkText {
+      50% {
+        opacity: 0;
+      }
+    }
+    .content {
+      max-width: 50%;
+    }
+    .content h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .content h1 span {
+      color: #ff4b5c;
+    }
+    .content h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    .content h2 span {
+      color: #ff4b5c;
+    }
+    .content p {
+      margin-bottom: 20px;
+      color: white;
+    }
+    .social-icons a {
+      color: #f14b5c;
+      margin-right: 10px;
+      font-size: 1.5em;
+    }
+    .hire-me {
+      background-color: #ff4b5c;
+      margin: 20px 0;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1em;
+      transition: 0.2s;
+      cursor: none;
+    }
+    .hire-me a {
+      text-decoration: none;
+      color: #fff;
+    }
+    .hire-me:active {
+      background-color: #e70016;
+    }
+
+.image-container {
+  position: relative;
+  width: 300px;  /* Set the desired width */
+  height: 300px; /* Set the desired height */
+  overflow: hidden; /* Hide overflow */
+}
+
+.image-bg {
+  width: 300px;
+  height: 300px;
+  background-color: #ff4b5c; /* Background color */
+  border-radius: 50%; /* Make the background circular */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Keep background behind the image */
+}
+
+.image-container img {
+  width: 100%; /* Make image take up the full width */
+  height: 100%; /* Make image take up the full height */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the area */
+  transition: transform 1s ease-in-out;
+  filter: grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(0%); /*color of image*/
+}
+
+.container-services, .projects {
+  padding: 0 30px;
+}
+.container h1, .projects h1 {
+  font-size: 2em;
+}
+
+  .projects h1 {
+    text-align: center;
+  }
+.project-cards .card {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.project-cards .btn {
+  background: #ff4b5c;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  margin: 0 10px;
+  margidn-top: 10px;
+  font-size: 1rem;
+}
+
+.project-cards .visit-github-projects {
+  display: flex;
+  justify-content: end;
+}
+
+.card h2 {
+  z-index: 100;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+#airbnbClone-text {
+  color: #bb56ff;
+  background: #fff;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+#flipkartClone-text {
+  color: #ff4b5c;
+  background: #fff;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+.card-outer p {
+  background: #f6f6f6;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  z-index: 200;
+}
+
+.card-outer {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 10px;
+  transform: scale(1);
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.card-outer:hover {
+  transform: scale(1.02);
+}
+.card-outer .card-img {
+  paddidng: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(1.1);
+  box-shadow: 1px 1px 20pc #9800ff;
+}
+#card-airbnb-img {
+  box-shadow: 1px 1px 20pc red;
+  
+}
+.card-outer .card-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.top-scroll-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 200px;;
+}
+.section-3d-object {
+  overflow: hidden;
+}
+.section-3d-object a {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2px;
+  text-decoration: underline 2px red;
+}
+
+@media (min-width: 768px) {
+  .services-infos {
+    padding: 0 3rem;
+  }
+}
+
+.scrollable-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  /*paddeing: 20px;*/
+  column-gap: 20px;
+  background: ;
+  transform: skew(-10deg);
+}
+
+.scrollable-boxes {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 40vw;
+  background: linear-gradient(to top right, #fff 90%, #ff4b5c 10%);
+  backgryound: red;
+  box-shadow: 3px 3px 0 red !important;
+}
+.scrollable-boxes i {
+  color: #ff4b5c;
+}
+section {
+  paddixng-top: 80px !important;
+  padding: 60px 20px !important;
+}
+  .lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fonty-size: 10px;
+    background: #d5d5d5;
+    margin: 0 20px;
+    height: 10px;
+    border-radius: 10px;
+    color: #ff4b5c;
+    padding: 5px 0;
+    box-shadow: 2px 2px 0 red;
+    background-size: 200%; 
+    position: sticky;
+  }
+  .lines span {
+    text-shadow: 1px 1px 5px black;
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    transition: all 1s;
+    animation: animateToline infinite alternate 2s;
+  }
+  @keyframes animateToline {
+    0%{
+      left: 0;
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    100%{
+      left: 90%;
+      color: #ff2036;
+      transform: rotate(360deg);
+      font-size: 70px;
+      opacity: 1;
+    }
+  }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            margin: 5px;
+            background: ;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .section-title i {
+            font-size: 1.8rem;
+            color: #4CAF50;
+        }
+
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+        }
+        .skill-card {
+            background: #ffffff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .skill-card i {
+            font-size: 2rem;
+            color: #ff4b5c;
+            margin-bottom: 10px;
+            text-shadow: 5px 5px 5px black;
+            transition: all 0.5s;
+        }
+
+        .skill-card p {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+        }
+a {
+  cursor: none;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* For Phones (max-width: 768px) */
+@mezdia (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links {
+    top: 10vh;
+    right: -300px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .content h1,
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .hire-me {
+    padding: 8px 15px;
+  }
+}
+
+/* For Tablets (min-width: 769px and max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content h1,
+  .content h2 {
+    font-size: 2rem;
+  }
+  .card-outer .card-img {
+    margin: 0 30px;
+  }
+  .nav-links {
+    flex-direction: row;
+    position: static;
+    flex: 1;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    justify-content: center;
+  }
+  .nav-links a {
+    flex: 1;
+    justify-content: center;
+  }
+    .text {
+      position: static;
+      color: black;
+      font-size: 15px;
+      transition: none;
+      z-index: -1;
+      font-size: 2px;
+      opacity: 0;
+      padding: 5px;
+      display: none;
+    }
+    .hamburger {
+      display: none;
+    }
+    section {
+    padding: 100px 60px !important;
+  hero {
+    padding-top: 80px;
+  }
+}
+
+/* For PCs (min-width: 1025px) */
+
+@media (min-width: 1025px) {
+  .nav-links {
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    display: flex;
+  }
+  .nav-links a {
+    padding: 10px 15px;
+  } 
+  .card-outer .card-img {
+    margin: 0 30px;
+  }
+  .content h1 {
+    font-size: 3rem;
+  }
+  section {
+    padding: 100px 60px !important;
+  }
+  .hero {
+    padding-top: 100px;
+  }
+}
